@@ -41,7 +41,7 @@ a:not(.btn):hover {
   border-bottom: 2px solid;
 }
 
-h1, h5, span {
+h1, h5, h6, span {
   color: #243e63;
 }
 
@@ -49,12 +49,22 @@ p {
   color: #777;
 }
 
+/* used for section inter-headings*/
 h1 {
   font-size: 48px;
+  font-weight: 900;
 }
 
+/* used for section pre-headings */
 h5 {
   font-size: 16px;
+  color: #6415FF;
+}
+
+/* used for steps headings */
+h6 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 p {
@@ -202,11 +212,18 @@ Features
   text-align: center;
 }
 
+
 .features__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.section__para {
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-top: 16px;
 }
 
 .feature {
@@ -247,3 +264,85 @@ Features
 .feature__description--para {
   margin-top: 16px;
 }
+
+/* 
+
+Sections
+
+*/
+
+/* 
+
+Quality work
+
+*/
+
+.section__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__side-description,
+.section__side-img {
+  width: 50%;
+}
+
+
+#quality .section__side-description {
+  margin-right: 64px;
+}
+
+#quality .section__para {
+  margin-bottom: 24px;
+}
+
+#quality .section__side-img {
+  border: 1px solid #e5e7eb;
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+
+
+
+/* 
+
+Steps
+
+*/
+
+#steps .section__side-description {
+  padding-left: 64px;
+}
+
+.step__number {
+  font-size: 36px;
+  color: #cbd5e0;
+  font-weight: 600;
+  width: 50px;
+}
+
+.steps__para {
+  font-size: 14px;
+  font-weight: 500;
+}
+.step {
+  display: flex;
+  justify-content: start;
+  margin-top: 32px;
+}
+
+.step__description {
+  margin-left: 24px;
+}
+
+.steps__para {
+  margin-top: 12px;
+}
+
+/* 
+
+Values
+
+*/
