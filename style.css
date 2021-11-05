@@ -91,6 +91,8 @@ p {
 }
 
 
+
+
 /* 
 
 NAVBAR
@@ -398,4 +400,163 @@ Values
   font-size: 16px;
   padding-right: 8px;
   margin-left: 0;
+}
+
+/* 
+
+Plans
+
+*/
+
+#pricing {
+  text-align: center;
+}
+
+
+.plans {
+  display: flex;
+
+}
+
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 64px 32px 0 0;
+  max-width: 24rem;
+  width: calc(100% / 3);
+  border-radius: 8px;
+  border: 0 solid #e5e7eb;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+}
+
+.plan__highlight {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: linear-gradient(
+    115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+
+.plan__features {
+  border-top: 2px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.plans .btn {
+  margin: 32px 64px;
+  padding: 16px 32px;
+  background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+  font-weight: 700;
+}
+
+.plan span {
+  color: #000;
+}
+
+.plan__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.plan__price {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.plan__header {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+}
+
+.plan__main-feature {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* double class, to increase specificity */
+.plan__feature.plan__feature {
+  font-weight: 500;
+  margin-top: 20px;
+  color: #718096;
+}
+
+.plan:nth-child(2) {
+  background-image: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+  color: #fff;
+}
+
+.plan:nth-child(2) span {
+  color:white;
+}
+
+.plan:nth-child(2) .btn {
+  background: none;
+  background-color: white;
+  color: #6415ff;
+}
+
+.plan:nth-child(3) .plan__highlight,
+.plan:nth-child(3) .btn {
+  background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+/* 
+
+Get Started
+
+*/
+
+.get-started__wrapper {
+  padding: 96px 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6415ff;
+  border-radius: 8px;
+}
+
+#get-started h5 {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  width: 50%;
+}
+
+.get-started__buttons .btn {
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.get-started__buttons .btn:nth-child(1) {
+  background-color: #f56565;
+  margin-right: 32px;
+}
+.get-started__buttons .btn:nth-child(1):hover {
+  background-color: #e53e3e;
+}
+
+.get-started__buttons .btn:nth-child(2) {
+  border: 0.25px solid white;
+}
+.get-started__buttons .btn:nth-child(2):hover {
+  background-color: white;
+  color: #6415ff;
+}
+
+svg {
+  width: 500px;
+  height: 500px;
 }
