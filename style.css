@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-family: Inter, system-ui;
   letter-spacing: 0.025em;
+  z-index: 0;
+  opacity: 1;
 }
 
 body {
@@ -519,12 +521,14 @@ Get Started
 */
 
 .get-started__wrapper {
-  padding: 96px 128px;
+  position: relative;
+  padding: 88px 128px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #6415ff;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 #get-started h5 {
@@ -534,15 +538,27 @@ Get Started
   width: 50%;
 }
 
+.get-started__buttons,
+#get-started h5 {
+  z-index: 1;
+}
+
+.get-started__buttons {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
 .get-started__buttons .btn {
   padding: 20px 40px;
+  margin: 10px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .get-started__buttons .btn:nth-child(1) {
   background-color: #f56565;
-  margin-right: 32px;
 }
 .get-started__buttons .btn:nth-child(1):hover {
   background-color: #e53e3e;
@@ -553,10 +569,28 @@ Get Started
 }
 .get-started__buttons .btn:nth-child(2):hover {
   background-color: white;
-  color: #6415ff;
+  color: #be9eff;
 }
 
-svg {
+.get-started__blob {
   width: 500px;
   height: 500px;
+  position: absolute;
+  z-index: -3;
 }
+
+.get-started__blob:nth-of-type(1) {
+  bottom: 0;
+  left: 0;
+  transform: translateY(240px)
+    translateX(-150px);
+}
+
+.get-started__blob:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  transform: translateY(-250px)
+    translateX(150px)
+    rotate(-45deg);
+}
+
