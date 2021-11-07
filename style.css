@@ -8,10 +8,6 @@
   opacity: 1;
 }
 
-body {
-  padding: 32px;
-}
-
 .row {
   width: 100%;
   max-width: 1200px;
@@ -38,7 +34,7 @@ a {
   border-bottom: 2px solid transparent;
 }
 
-a:not(.btn):hover {
+a:not(.btn):not(.social-link__wrapper):hover {
   color: #6415FF;
   border-bottom: 2px solid;
 }
@@ -101,6 +97,10 @@ NAVBAR
 
 */
 
+nav {
+  padding: 32px;
+}
+
 .logo__wrapper {
   display: flex;
   align-items: center;
@@ -152,7 +152,7 @@ Header
 
 .header{
   display: flex;
-  padding: 96px 0;
+  padding: 96px 32px;
   justify-content: space-between;
   align-items: center;
 }
@@ -592,5 +592,112 @@ Get Started
   transform: translateY(-250px)
     translateX(150px)
     rotate(-45deg);
+}
+
+/* 
+
+FOOTER
+
+*/
+
+footer {
+  background-color: #6415ff;
+  padding: 32px;
+}
+
+.column__heading,
+.bottom__logo--text,
+.bottom__copyright {
+  color: white;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__link-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.column__link {
+  display: block;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.column__heading {
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+
+.bottom__logo {
+  width: 40px;
+  height: 40px;
+}
+
+a.column__link {
+  color: white;
+  margin-top: 8px;
+}
+
+a.column__link.column__link:hover {
+  color: white;
+}
+
+
+.bottom__social-links {
+  display: flex;
+}
+
+.social-link__wrapper {
+  display: flex;
+  padding: 8px;
+  background-color: white;
+  border-radius: 99px;
+  border-bottom: none;
+}
+
+.social-link__wrapper:hover {
+  opacity: 0.8;
+}
+
+.social-link__wrapper:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.social-link__wrapper i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: #6415ff;
+}
+
+.footer__divider {
+  border: 1px solid white;
+  opacity: 0.2;
+  margin: 32px;
+}
+
+.bottom__logo--wrapper {
+  display: flex;
+}
+
+.bottom__logo--text {
+  font-weight: 900;
+  font-size: 32px;
+  margin-left: 8px;
 }
 
